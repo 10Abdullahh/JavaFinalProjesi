@@ -1,0 +1,21 @@
+import java.util.Calendar;
+
+public class DogumGunuBulma {
+
+    public static void main(String[] args) {
+        // İsim ve tarihi girme
+        System.out.print("İsim giriniz: ");
+        String isim = scanner.nextLine();
+        System.out.print("Tarih giriniz (YYYY-MM-DD): ");
+        String tarih = scanner.nextLine();
+
+        // Doğum gününü bulma
+        Calendar takvim = Calendar.getInstance();
+        takvim.set(Integer.parseInt(tarih.substring(0, 4)), Integer.parseInt(tarih.substring(5, 7)), Integer.parseInt(tarih.substring(8)));
+        int ay = takvim.get(Calendar.MONTH);
+        int gun = takvim.get(Calendar.DATE);
+
+        // Doğum gününü yazdırma
+        System.out.println(isim + "'nin doğum günü: " + ay + "/" + gun);
+    }
+}

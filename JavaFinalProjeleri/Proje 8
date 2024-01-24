@@ -1,0 +1,17 @@
+public class Fibonacci {
+
+    public static void main(String[] args) {
+        // Fibonacci serisinin ilk iki sayısını belirleme
+        int fibo0 = 1;
+        int fibo1 = 1;
+
+        // Fibonacci serisini üretme
+        for (int i = 2; i < 10; i++) {
+            int fibo = fibo0 + fibo1;
+            fibo0 = fibo1;
+            fibo1 = fibo;
+
+            System.out.println(fibo);
+        }
+    }
+}

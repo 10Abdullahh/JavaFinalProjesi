@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class BasamakAyırıcı {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Bir sayı girin: ");
+        int sayi = scanner.nextInt();
+
+        // Basamakları ayırma
+        int birlerBasamak = sayi % 10;
+        int onlarBasamak = (sayi / 10) % 10;
+        int yüzlerBasamak = (sayi / 100) % 10;
+        int binlerBasamak = (sayi / 1000) % 10;
+
+        // Basamakları yazdırma
+        System.out.println("Birler basamağı: " + birlerBasamak);
+        System.out.println("Onlar basamağı: " + onlarBasamak);
+        System.out.println("Yüzler basamağı: " + yüzlerBasamak);
+        System.out.println("Binler basamağı: " + binlerBasamak);
+    }
+}

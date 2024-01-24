@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+public class KaydırmaProblemi {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Diziyi girme
+        System.out.print("Bir dizi sayı giriniz: ");
+        String dizi = scanner.nextLine();
+
+        // Dizi uzunluğunu belirleme
+        int uzunluk = dizi.length();
+
+        // Kaydırma miktarını girme
+        System.out.print("Kaydırma miktarını giriniz: ");
+        int kaydirmaMiktari = scanner.nextInt();
+
+        // Kaydırma işlemini gerçekleştirme
+        String kaydirilmisDizi = "";
+        for (int i = kaydirmaMiktari; i < uzunluk; i++) {
+            kaydirilmisDizi += dizi.charAt(i);
+        }
+        for (int i = 0; i < kaydirmaMiktari; i++) {
+            kaydirilmisDizi += dizi.charAt(i);
+        }
+
+        // Kaydırılmış diziyi yazdırma
+        System.out.println("Kaydırılmış dizi: " + kaydirilmisDizi);
+    }
+}

@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+public class SayiCevir {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Bir sayı girin: ");
+        int sayi = scanner.nextInt();
+
+        // Onluk sayı sistemine çevirme
+        System.out.println("Onluk sayı sistemi: " + sayi);
+
+        // İkilik sayı sistemine çevirme
+        String ikilik = Integer.toBinaryString(sayi);
+        System.out.println("İkili sayı sistemi: " + ikilik);
+
+        // Sekizlik sayı sistemine çevirme
+        String sekizlik = Integer.toOctalString(sayi);
+        System.out.println("Sekizlik sayı sistemi: " + sekizlik);
+
+        // Onaltılık sayı sistemine çevirme
+        String onaltilik = Integer.toHexString(sayi);
+        System.out.println("Onaltılık sayı sistemi: " + onaltilik);
+    }
+}

@@ -1,0 +1,39 @@
+import java.util.Scanner;
+
+public class BasitHesapMakinesi {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        // Sayıları ve işlemi girme
+        System.out.print("Birinci sayıyı giriniz: ");
+        int sayi1 = scanner.nextInt();
+        System.out.print("İkinci sayıyı giriniz: ");
+        int sayi2 = scanner.nextInt();
+        System.out.print("İşlemi giriniz (+, -, *, /): ");
+        char islem = scanner.next().charAt(0);
+
+        // Hesaplama
+        double sonuc = 0;
+        switch (islem) {
+            case '+':
+                sonuc = sayi1 + sayi2;
+                break;
+            case '-':
+                sonuc = sayi1 - sayi2;
+                break;
+            case '*':
+                sonuc = sayi1 * sayi2;
+                break;
+            case '/':
+                sonuc = sayi1 / sayi2;
+                break;
+            default:
+                System.out.println("Geçersiz işlem girdiniz.");
+                return;
+        }
+
+        // Sonucu yazdırma
+        System.out.println(sayi1 + " " + islem + " " + sayi2 + " = " + sonuc);
+    }
+}

@@ -1,0 +1,53 @@
+import java.util.Scanner;
+
+public class TasKagitMakas {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Taş, kağıt veya makas seçiniz: ");
+        String secim = scanner.nextLine();
+
+        // Bilgisayarın seçimini oluşturma
+        int bilgisayarSecimi = (int) (Math.random() * 3) + 1;
+
+        // Oyunun sonucunu belirleme
+        String sonuc;
+        switch (secim) {
+            case "taş":
+                if (bilgisayarSecimi == 1) {
+                    sonuc = "Berabere";
+                } else if (bilgisayarSecimi == 2) {
+                    sonuc = "Kaybettiniz";
+                } else {
+                    sonuc = "Kazandınız";
+                }
+                break;
+            case "kağıt":
+                if (bilgisayarSecimi == 2) {
+                    sonuc = "Berabere";
+                } else if (bilgisayarSecimi == 3) {
+                    sonuc = "Kaybettiniz";
+                } else {
+                    sonuc = "Kazandınız";
+                }
+                break;
+            case "makas":
+                if (bilgisayarSecimi == 3) {
+                    sonuc = "Berabere";
+                } else if (bilgisayarSecimi == 1) {
+                    sonuc = "Kaybettiniz";
+                } else {
+                    sonuc = "Kazandınız";
+                }
+                break;
+            default:
+                sonuc = "Geçersiz seçim";
+                break;
+        }
+
+        System.out.println("Sizin seçiminiz: " + secim);
+        System.out.println("Bilgisayarın seçimi: " + (bilgisayarSecimi == 1 ? "taş" : bilgisayarSecimi == 2 ? "kağıt" : "makas"));
+        System.out.println("Sonuç: " + sonuc);
+    }
+}

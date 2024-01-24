@@ -1,0 +1,42 @@
+import java.util.ArrayList;
+
+public class PazarYeri {
+
+    private ArrayList<Satisci> satisciler;
+    private ArrayList<Urun> urunler;
+
+    public PazarYeri() {
+        satisciler = new ArrayList<>();
+        urunler = new ArrayList<>();
+    }
+
+    // Satıcı ekleme
+    public void satisciEkle(Satisci satisci) {
+        satisciler.add(satisci);
+    }
+
+    // Satıcı silme
+    public void satisciSil(Satisci satisci) {
+        satisciler.remove(satisci);
+    }
+
+    // Ürün ekleme
+    public void urunEkle(Urun urun) {
+        urunler.add(urun);
+    }
+
+    // Ürün silme
+    public void urunSil(Urun urun) {
+        urunler.remove(urun);
+    }
+
+    // Satıcıları döndürme
+    public ArrayList<Satisci> satiscilariGetir() {
+        return satisciler;
+    }
+
+    // Ürünleri döndürme
+    public ArrayList<Urun> urunleriGetir() {
+        return urunler;
+    }
+}

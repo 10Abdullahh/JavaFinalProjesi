@@ -1,0 +1,29 @@
+import java.util.Scanner;
+
+public class EnBuyukSayiVeSirasi {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Bir dizi sayı giriniz: ");
+        String dizi = scanner.nextLine();
+
+        // Diziyi parçalara ayırma
+        String[] sayilar = dizi.split(" ");
+
+        // En büyük sayıyı ve sırasını bulma
+        int enBuyukSayi = Integer.MIN_VALUE;
+        int enBuyukSayiSirasi = 0;
+        for (int i = 0; i < sayilar.length; i++) {
+            int sayi = Integer.parseInt(sayilar[i]);
+            if (sayi > enBuyukSayi) {
+                enBuyukSayi = sayi;
+                enBuyukSayiSirasi = i + 1;
+            }
+        }
+
+        // Sonuçları yazdırma
+        System.out.println("En büyük sayı: " + enBuyukSayi);
+        System.out.println("En büyük sayının sırası: " + enBuyukSayiSirasi);
+    }
+}
